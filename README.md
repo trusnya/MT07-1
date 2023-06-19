@@ -297,7 +297,7 @@ _P.S.: Тело запроса и тело ответа нужно привод�
 exercise1.md
 exercise2.plan.xlsx
 exercise2.results.xlsx
-exercise2.md (если были найдены баги)
+exercise2.bugs.md (если были найдены баги)
 exercise3.png
 exercise4.md
 exercise4.1.png
