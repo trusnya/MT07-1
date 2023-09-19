@@ -43,7 +43,8 @@ Connection: keep-alive
 ## GET/api/v1/Users/{id}
 
 ## POST/api/v1/Users
-
+## PUT /api/v1/Users/{id}
+## DELETE /api/v1/Users/{id}
 
 # Activities
 ## GET/api/v1/Activitie  
@@ -719,6 +720,4 @@ api-supported-versions: 1.0
 HTTP status: 200 - Sucess
 ```
 
-## PUT /api/v1/Users/{id}
 
-## DELETE /api/v1/Users/{id}
