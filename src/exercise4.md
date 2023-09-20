@@ -816,36 +816,833 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
 
-2. 
+2. все правильно ид1
 
 3. Request headers
 ```
-
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 8b05c21b-88d3-41c5-9e93-4aeb7aae5579
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
 ```
 4. Request body
 ```
-
+{
+  "id": 1,
+  "idBook": 1,
+  "url": "string"
+}
 ```
 5. Response headers
 ```
-
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 10:39:56 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
 ```
 6. Response body
 ```
-
+{
+    "id": 1,
+    "idBook": 1,
+    "url": "string"
+}
 ```
-## PUT/api/v1/CoverPhotos/{id}
+## POST/api/v1/CoverPhotos - Error
 
-## DELETE/api/v1/CoverPhotos/{id}
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
+
+2. неверный джсон
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 7d6c4a9e-7d98-4bac-be7a-a2e9babf4827
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": 1,
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 10:42:38 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-3d1c509647dd3945ae069c77f42a5325-1cc7ba1593220a47-00",
+    "errors": {
+        "$": [
+            "The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+        ]
+    }
+}
+```
+## POST/api/v1/CoverPhotos - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
+
+2. пустые строки ошибка 415
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: ee4a1604-5ed9-417c-9f24-265b227e9b4c
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 10:49:10 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.13",
+    "title": "Unsupported Media Type",
+    "status": 415,
+    "traceId": "00-3c7b3ace2d3225488c0528005984f345-d8636ff6585b1a41-00"
+}
+```
+## POST/api/v1/CoverPhotos - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
+
+2. неверный ид фореверянг ошибка 400 
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 9ea9c867-52d6-45f4-acfc-7d75b8fc9947
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": foreveryoung,
+  "idBook": 0,
+  "url": "string"
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 10:51:59 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-cb1b6217585a3640a9f870d9ab92a524-bce626fd9d592542-00",
+    "errors": {
+        "$.id": [
+            "'foreveryoung,\r\n  \"idBook\": 0,\r\n  \"url\": \"string\"\r\n}' is an invalid JSON literal. Expected the literal 'false'. Path: $.id | LineNumber: 1 | BytePositionInLine: 9."
+        ]
+    }
+}
+```
+## PUT/api/v1/CoverPhotos/1
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
+
+2. обычный запрос 200 id1
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 607b918a-cdbd-49ee-a07f-0506d333eb20
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": 1,
+  "idBook": 1,
+  "url": "string"
+}
+```
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 18:03:34 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+6. Response body
+```
+{
+    "id": 1,
+    "idBook": 1,
+    "url": "string"
+}
+```
+## PUT/api/v1/CoverPhotos/1 - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
+
+2. неверный джсон ид1 ошибка 400
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: c2bc04de-bf13-4f6b-be6c-69d246be1427
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": 1,
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:08:02 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-ae4ddffdda0eff40a7adf4c75f452fa8-e757b65858f8914a-00",
+    "errors": {
+        "$": [
+            "The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+        ]
+    }
+}
+```
+## PUT/api/v1/CoverPhotos/{id} - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
+
+2. пустые строки ошибка 415 ид1
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 81599d24-4f0e-45ea-bce9-d2650e1eeb49
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:10:16 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.13",
+    "title": "Unsupported Media Type",
+    "status": 415,
+    "traceId": "00-abf59189a781bb4c838fd90de4c13378-693a77090491e240-00"
+}
+```
+## PUT/api/v1/CoverPhotos/foreveryoung - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
+
+2. ошибка 400 идфоревер янг
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 89903330-2f1f-40b0-88eb-2450e5b4aaae
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": foreveryoung,
+  "idBook": 0,
+  "url": "string"
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:12:30 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-ad45c9c942abdc408811c81fc81f89cb-b73339c2eebdc247-00",
+    "errors": {
+        "$.id": [
+            "'foreveryoung,\r\n  \"idBook\": 0,\r\n  \"url\": \"string\"\r\n}' is an invalid JSON literal. Expected the literal 'false'. Path: $.id | LineNumber: 1 | BytePositionInLine: 9."
+        ]
+    }
+}
+```
+## DELETE/api/v1/CoverPhotos/1
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
+
+2. удаление код 200 ид1
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 577c9518-ebc3-431c-b5b2-2441029f3284
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body - Нет
+
+5. Response headers
+```
+Content-Length: 0
+Date: Wed, 20 Sep 2023 18:15:50 GMT
+Server: Kestrel
+api-supported-versions: 1.0
+```
+6. Response body - Нет
 
 # Users: 
 
 ## GET/api/v1/Users
 
-## GET/api/v1/Users/{id}
+1. https://fakerestapi.azurewebsites.net/api/v1/Users
 
+2. код 200 Тело ответа имеет список всех пользователей, где обозначены id, Username и Password пользователя
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: b81a5cc6-0d40-4745-b2c6-ce6a1aeaeb4d
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body - Нет
+
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 18:18:27 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+6. Response body
+```
+[
+    {
+        "id": 1,
+        "userName": "User 1",
+        "password": "Password1"
+    },
+    {
+        "id": 2,
+        "userName": "User 2",
+        "password": "Password2"
+    },
+...
+]
+```
+## GET/api/v1/Users/1
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
+
+2. ид1 код 200
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 55ed9dda-0c22-4f52-a0f6-e42c83d1ecd5
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body - Нет
+
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 18:21:32 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+6. Response body
+```
+{
+    "id": 1,
+    "userName": "User 1",
+    "password": "Password1"
+}
+```
+## GET/api/v1/Users/10000000000 - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users/10000000000
+
+2. не верный ид ошибка 400
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 9fd42b1f-0d28-4e1b-8429-8d56335fafd0
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body - Нет
+
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:25:57 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-3f7cff8464eea748aa9caaeec0d512cf-5a1d9ad33541eb4a-00",
+    "errors": {
+        "id": [
+            "The value '10000000000' is not valid."
+        ]
+    }
+}
+```
 ## POST/api/v1/Users
 
-## PUT /api/v1/Users/{id}
+1. https://fakerestapi.azurewebsites.net/api/v1/Users
 
-## DELETE /api/v1/Users/{id}
+2. код 200 ид 1
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: ef9e0641-c255-4410-9a7a-92b9810bd9fe
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": 1,
+  "userName": "string",
+  "password": "string"
+}
+```
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 18:28:15 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+6. Response body
+```
+{
+    "id": 1,
+    "userName": "string",
+    "password": "string"
+}
+```
+## POST/api/v1/Users - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users
+
+2. неверный джсон ошибка 400
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: c911ffd3-d9d7-4a2a-9baa-81623940d3fd
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": 1,
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:31:44 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-5e8f1f41c064e34d9bc54dd6223c2d51-22066695db24744b-00",
+    "errors": {
+        "$": [
+            "The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+        ]
+    }
+}
+```
+## POST/api/v1/Users - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users
+
+2. пустые строки ошибка 415
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 7772f712-a943-45b1-84ee-35a279766185
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:37:34 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.13",
+    "title": "Unsupported Media Type",
+    "status": 415,
+    "traceId": "00-a51f52e8bb05dd448c08c156fb52bf56-bea1af122842764f-00"
+}
+```
+## POST/api/v1/Users - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users
+
+2. неверный ид фореверянг ошибка 400
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 5f5951ce-29e8-4f9a-8f5b-f9d90639d24d
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": foreveryoung,
+  "userName": "string",
+  "password": "string"
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:40:01 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-27d2be53b3269245aa8650ddbb46487a-059a8b45a28dcc4d-00",
+    "errors": {
+        "$.id": [
+            "'foreveryoung,\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}' is an invalid JSON literal. Expected the literal 'false'. Path: $.id | LineNumber: 1 | BytePositionInLine: 9."
+        ]
+    }
+}
+```
+## PUT /api/v1/Users/1
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
+
+2. код 200 ид 1
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: b91b0afc-4ceb-464d-a07b-bb0e91bf8632
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": 1,
+  "userName": "string",
+  "password": "string"
+}
+```
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 18:43:08 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+6. Response body
+```
+{
+    "id": 1,
+    "userName": "string",
+    "password": "string"
+}
+```
+## PUT /api/v1/Users/1 - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
+
+2. неверный джсон ошибка 400
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 6cd23111-4b7a-4578-8a38-0e3f58a5695d
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": 1,
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:45:41 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-7b58f18178826c4aaf86607219eabff5-a94c3d0d48702246-00",
+    "errors": {
+        "$": [
+            "The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+        ]
+    }
+}
+```
+## PUT /api/v1/Users/1 - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
+
+2. пустые строки ошибка 415
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: d8c186a0-e83e-46d7-8b1b-9b6cb40072a8
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:47:37 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.13",
+    "title": "Unsupported Media Type",
+    "status": 415,
+    "traceId": "00-c1fe27d4a99881449d95134afe49eb4e-1824b1452451bc4c-00"
+}
+```
+## PUT /api/v1/Users/{id} - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
+
+2. неверный ид фореверянг ошибка 400
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 5200a8c6-1e27-4ab3-b1c0-32196198d8f6
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body
+```
+{
+  "id": foreveryoung,
+  "userName": "string",
+  "password": "string"
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 18:50:11 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-128782da4281c643a1d273a79a01a0bb-45b92adcd410d041-00",
+    "errors": {
+        "$.id": [
+            "'foreveryoung,\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}' is an invalid JSON literal. Expected the literal 'false'. Path: $.id | LineNumber: 1 | BytePositionInLine: 9."
+        ]
+    }
+}
+```
+## DELETE /api/v1/Users/1
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
+
+2. ид1 код 200
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 9305ddb5-d1b1-46be-b460-a9e5b43c591d
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body - Нет
+
+5. Response headers
+```
+Content-Length: 0
+Date: Wed, 20 Sep 2023 18:52:21 GMT
+Server: Kestrel
+api-supported-versions: 1.0
+```
+6. Response body - Нет
