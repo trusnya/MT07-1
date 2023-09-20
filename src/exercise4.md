@@ -446,7 +446,8 @@ Connection: keep-alive
     "id": 0,
     "title": "string",
     "dueDate": "2023-09-19T14:52:29.114Z",
-
+...
+}
 ```  
 5. Заголовки ответа
 ```
@@ -616,7 +617,7 @@ HTTP status: 200 - Success
 
 2. Тело ответа корректное, имеет список всех обложек, в котором обозначены id обложки, id книги и URL обложки.
 
-HTTP status: 200 - Sucess
+HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
@@ -628,53 +629,211 @@ Host: fakerestapi.azurewebsites.net
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 ```
-4. Request body
-```
-```
+4. Request body - Нет
+
 5. Response headers
 ```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 09:00:17 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
 ```
 6. Response body
 ```
+[
+    {
+        "id": 1,
+        "idBook": 1,
+        "url": "https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 1&w=250&h=350"
+    },
+    {
+        "id": 2,
+        "idBook": 2,
+        "url": "https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 2&w=250&h=350"
+    },
+...
+]
 ```
-## GET/api​/v1​/CoverPhotos​/books​/covers​/{idBook}
+## GET/api​/v1​/CoverPhotos​/books​/covers​/1
 
-1. URL
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/books/covers/1
 
-2. Ожидаемый результат + HTPPS Status
+2. Тело ответа корректное, соответствует GET запросу на получение информации об обложке определенной книги c id=1 и обозначен url обложки
+
+HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 1516ebf7-752f-4b10-bb80-6103c35c11ec
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
 ```
-4. Request body
-```
-```
+4. Request body - Нет
+
 5. Response headers
 ```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 09:28:15 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
 ```
 6. Response body
 ```
+[
+  {
+    "id": 1,
+    "idBook": 1,
+    "url": "https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 1&w=250&h=350"
+  }
+]
 ```
-## GET/api/v1/CoverPhotos/{id}
+## GET/api​/v1​/CoverPhotos​/books​/covers​/10000000000 - Error 
 
-1. URL
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/books/covers/10000000000
 
-2. Ожидаемый результат + HTPPS Status
+2. Тело ответа корректное, соответствует GET запросу на получение информации о обложке определенный книги с id=10000000000 , которая отсутствует в каталоге 
+
+HTTP status: 400 - Bad Request
 
 3. Request headers
 ```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: bd1cb36b-5b06-4a24-9588-7c19c52b1afc
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body - Нет
+
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 09:37:53 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+  "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+  "title": "One or more validation errors occurred.",
+  "status": 400,
+  "traceId": "00-e2c083561d55cd42a58f1501bcb03539-6690371b31418d46-00",
+  "errors": {
+    "idBook": [
+      "The value '10000000000' is not valid."
+    ]
+  }
+}
+```
+## GET/api/v1/CoverPhotos/1
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
+
+2. Тело ответа корректное, соответствует GET запросу на получение информации об обложке id=1 и обозначен ее url
+
+HTTP status: 200 - Sucсess
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: bce8a9fe-0702-4cd2-a317-e4c9d319befa
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
 ```
 4. Request body
 ```
 ```
 5. Response headers
 ```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Wed, 20 Sep 2023 09:45:10 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
 ```
 6. Response body
 ```
+{
+    "id": 1,
+    "idBook": 1,
+    "url": "https://placeholdit.imgix.net/~text?txtsize=33&txt=Book 1&w=250&h=350"
+}
+```
+## GET/api/v1/CoverPhotos/10000000000 - Error
+
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/10000000000
+
+2. Тело ответа корректное, соответствует GET запросу на получение информации о обложке с id=10000000000 , которая отсутствует в каталоге 
+
+HTTP status: 400 - Bad Request
+
+3. Request headers
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 73c44896-1eae-4464-a7f9-ede73f8706fd
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body - Нет
+
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Wed, 20 Sep 2023 09:52:15 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-899acadc76742744a474cf6fc1645ef5-b187df33f5aee849-00",
+    "errors": {
+        "id": [
+            "The value '10000000000' is not valid."
+        ]
+    }
+}
 ```
 ## POST/api/v1/CoverPhotos
 
+1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
+
+2. 
+
+3. Request headers
+```
+
+```
+4. Request body
+```
+
+```
+5. Response headers
+```
+
+```
+6. Response body
+```
+
+```
 ## PUT/api/v1/CoverPhotos/{id}
 
 ## DELETE/api/v1/CoverPhotos/{id}
