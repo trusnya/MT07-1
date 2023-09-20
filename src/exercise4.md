@@ -373,7 +373,7 @@ https://fakerestapi.azurewebsites.net/api/v1/Activities/5
 
 2. Ожидаемый результат 
   
-Тело ответа корректное, соответствует GET запросу на изменение информации об активности с id 5   
+Тело ответа корректное, соответствует PUT запросу на изменение информации об активности с id 5   
 
 HTTP status: 200 - Success
 
@@ -426,7 +426,7 @@ https://fakerestapi.azurewebsites.net/api/v1/Activities/5
   
 Тело ответа содержит сообщение о том, что допущена ошибка, указан ее статус и значение
 
-HTTP status: 400Bad Request
+HTTP status: 400 Bad Request
 
 3. Заголовки запроса 
   
@@ -525,7 +525,7 @@ https://fakerestapi.azurewebsites.net/api/v1/Activities/10000000000
   
 Тело ответа содержит сообщение о том, что допущена ошибка, указан ее статус и значение
 
-HTTP status: 400Bad Request
+HTTP status: 400 Bad Request
 
 3. Заголовки запроса 
   
@@ -539,7 +539,6 @@ Host: fakerestapi.azurewebsites.net
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 ```
-
 4. Тело запроса 
 ```
 {
@@ -549,7 +548,7 @@ Connection: keep-alive
   "completed": true
 }
 ```  
-5.Заголовки ответа
+5. Заголовки ответа
 ```
 Content-Type: application/json; charset=utf-8; v=1.0
 Date: Tue, 19 Sep 2023 09:56:44 GMT
@@ -816,7 +815,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
 
-2. все правильно ид1
+2. Тело ответа корректное, соответствует POST запросу на добавление обложки id=1
+
+HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
@@ -857,7 +858,9 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
 
-2. неверный джсон
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 400 Bad Request
 
 3. Request headers
 ```
@@ -901,7 +904,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
 
-2. пустые строки ошибка 415
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 415 Unsupported Media Type
 
 3. Request headers
 ```
@@ -936,7 +941,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos
 
-2. неверный ид фореверянг ошибка 400 
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка
+
+HTTP status: 400 Bad Request
 
 3. Request headers
 ```
@@ -982,7 +989,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
 
-2. обычный запрос 200 id1
+2. Тело ответа корректное, соответствует PUT запросу на изменение информации об обложке id=1
+
+HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
@@ -1023,7 +1032,9 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
 
-2. неверный джсон ид1 ошибка 400
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 400 Bad Request
 
 3. Request headers
 ```
@@ -1067,7 +1078,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
 
-2. пустые строки ошибка 415 ид1
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 415 Unsupported Media Type
 
 3. Request headers
 ```
@@ -1102,7 +1115,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
 
-2. ошибка 400 идфоревер янг
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 400 Bad Request
 
 3. Request headers
 ```
@@ -1148,7 +1163,7 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/CoverPhotos/1
 
-2. удаление код 200 ид1
+2. HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
@@ -1177,7 +1192,9 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users
 
-2. код 200 Тело ответа имеет список всех пользователей, где обозначены id, Username и Password пользователя
+2. Тело ответа имеет список всех пользователей, где обозначены id, Username и Password пользователя
+
+HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
@@ -1219,7 +1236,9 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
 
-2. ид1 код 200
+2. Тело ответа корректное, соответствует GET запросу на получение информации об пользователе id=1 и обозначен его url
+
+HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
@@ -1253,7 +1272,9 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users/10000000000
 
-2. не верный ид ошибка 400
+2. Тело ответа корректное, соответствует GET запросу на получение информации о пользователе с id=10000000000 , который отсутствует в каталоге 
+
+HTTP status: 400 - Bad Request
 
 3. Request headers
 ```
@@ -1292,7 +1313,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users
 
-2. код 200 ид 1
+2. Тело ответа корректное, соответствует POST запросу на добавление пользователя
+
+HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
@@ -1333,7 +1356,9 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users
 
-2. неверный джсон ошибка 400
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 400 Bad Request
 
 3. Request headers
 ```
@@ -1377,7 +1402,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users
 
-2. пустые строки ошибка 415
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 415 Unsupported Media Type
 
 3. Request headers
 ```
@@ -1412,7 +1439,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users
 
-2. неверный ид фореверянг ошибка 400
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 400 Bad Request
 
 3. Request headers
 ```
@@ -1458,7 +1487,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
 
-2. код 200 ид 1
+2. Тело ответа корректное, соответствует PUT запросу на изменение информации об пользователе с id=1 
+
+HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
@@ -1499,7 +1530,9 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
 
-2. неверный джсон ошибка 400
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 400 Bad Request
 
 3. Request headers
 ```
@@ -1543,7 +1576,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
 
-2. пустые строки ошибка 415
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 415 Unsupported Media Type
 
 3. Request headers
 ```
@@ -1578,7 +1613,9 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
 
-2. неверный ид фореверянг ошибка 400
+2. Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
+
+HTTP status: 400 Bad Request
 
 3. Request headers
 ```
@@ -1624,7 +1661,7 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Users/1
 
-2. ид1 код 200
+2. HTTP status: 200 - Sucсess
 
 3. Request headers
 ```
