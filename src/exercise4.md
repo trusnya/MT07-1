@@ -1,7 +1,7 @@
 # Пример: 
 
 1. URL (вставляйте его прямо со скобками, например, "https://fakerestapi.azurewebsites.net/api/v1/Activities/{{activity_id}}")
-2. Ожидаемый результат (своими словами)
+2. Ожидаемый результат (своими словами) + HTTPS status
 3. Заголовки запроса - Request headers (можно посмотреть через консоль в левом нижнем углу)
 4. Тело запроса - Request body (если тело слишком большое, то только его часть)
 5. Заголовки ответа - Response headers
@@ -606,7 +606,7 @@ api-supported-versions: 1.0
 ```
 6. Тело ответа 
 ```
-HTTP status: 200 - Sucess
+HTTP status: 200 - Success
 ```
 # CoverPhotos:
 
@@ -616,7 +616,9 @@ HTTP status: 200 - Sucess
 
 2. Тело ответа корректное, имеет список всех обложек, в котором обозначены id обложки, id книги и URL обложки.
 
-3. 
+HTTP status: 200 - Sucess
+
+3. Request headers
 ```
 User-Agent: PostmanRuntime/7.33.0
 Accept: */*
@@ -626,12 +628,51 @@ Host: fakerestapi.azurewebsites.net
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 ```
-4. 
-
+4. Request body
+```
+```
+5. Response headers
+```
+```
+6. Response body
+```
+```
 ## GET/api​/v1​/CoverPhotos​/books​/covers​/{idBook}
 
+1. URL
+
+2. Ожидаемый результат + HTPPS Status
+
+3. Request headers
+```
+```
+4. Request body
+```
+```
+5. Response headers
+```
+```
+6. Response body
+```
+```
 ## GET/api/v1/CoverPhotos/{id}
 
+1. URL
+
+2. Ожидаемый результат + HTPPS Status
+
+3. Request headers
+```
+```
+4. Request body
+```
+```
+5. Response headers
+```
+```
+6. Response body
+```
+```
 ## POST/api/v1/CoverPhotos
 
 ## PUT/api/v1/CoverPhotos/{id}
@@ -645,6 +686,7 @@ Connection: keep-alive
 ## GET/api/v1/Users/{id}
 
 ## POST/api/v1/Users
-## PUT /api/v1/Users/{id}
-## DELETE /api/v1/Users/{id}
 
+## PUT /api/v1/Users/{id}
+
+## DELETE /api/v1/Users/{id}
