@@ -1691,7 +1691,8 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors
 
-2. HTTP status: 200 - Sucсess
+2. Тело ответа корректное, соответствует GET запросу на получение списка авторов 
+HTTP status: 200 - Sucсess
 
 3. Request headers 
 ```
@@ -1754,7 +1755,8 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/5
 
-2. HTTP status: 200 - Sucсess
+2. Тело ответа корректное, соответствует GET запросу на получение информации о конкретной книги автора
+HTTP status: 200 - Sucсess
 
 3. Request headers 
 ```
@@ -1820,7 +1822,8 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/10000000000
 
-2. HTTP status: 400 Error: Bad Request
+2. Тело ответа корректное, соответствует GET запросу на получение информации о книге с id "10000000000"
+HTTP status: 400 Error: Bad Request
 
 3. Request headers 
 ```
@@ -1872,7 +1875,8 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5 
 
-2. HTTP status: 200 - Sucсess
+2. Тело ответа корректное, соответствует GET запросу на получение информации об авторах с id 5
+HTTP status: 200 - Sucсess
 
 3. Request headers 
 ```
@@ -1917,7 +1921,8 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/10000000000 
 
-2. HTTP status: 400 Error Bad Request
+2. Тело ответа корректное, соответствует GET-запросу о конкретном авторе с id "10000000000"
+HTTP status: 400 Error Bad Request
 
 3. Request headers 
 ```
@@ -1967,7 +1972,8 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors
 
-2. HTTP status: 200 - Sucсess
+2. Тело ответа корректное, соответствует POST-запросу на создание нового автора
+HTTP status: 200 - Sucсess
 
 3. Request headers 
 ```
@@ -2012,7 +2018,8 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors 
 
-2. HTTP status: 400 Error Bad Request
+2. Тело ответа корректное, соответствует введенному невалидному id автора
+HTTP status: 400 Error Bad Request
 
 3. Request headers 
 ```
@@ -2058,7 +2065,8 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors 
 
-2. HTTP status: 415 Unsupported Media Type
+2. Тело ответа корректное, соответствует введенному пустому запросу
+HTTP status: 415 Unsupported Media Type
 
 3. Request headers 
 ```
@@ -2095,7 +2103,8 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors
 
-2. HTTP status: 400 Error Bad Request
+2. Тело ответа корректное, соответствует неверно введенному запросу 
+HTTP status: 400 Error Bad Request
 
 3. Request headers 
 ```
@@ -2140,7 +2149,8 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
 
-2. HTTP status: 200 - Sucсess
+2. Тело ответа корректное, соответствует введенным данным
+HTTP status: 200 - Sucсess
 
 3. Request headers 
 ```
@@ -2185,7 +2195,8 @@ api-supported-versions: 1.0
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
 
-2. HTTP status: 400 Error Bad Request
+2. Тело ответа корректное, соответствует введенным некорректно данным
+HTTP status: 400 Error Bad Request
 
 3. Request headers 
 ```
@@ -2226,7 +2237,8 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
 
-2. HTTP status: 415 Unsupported Media Type
+2. Тело ответа корректное, соответствует запросу с пустым телом
+HTTP status: 415 Unsupported Media Type
 
 3. Request headers 
 ```
@@ -2263,7 +2275,8 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
 
-2. HTTP status: 400 Error Bad Request
+2. Тело ответа корректное, соответствует введенному неверно id
+HTTP status: 400 Error Bad Request
 
 3. Request headers
 ```
@@ -2309,7 +2322,8 @@ Transfer-Encoding: chunked
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
 
-2. HTTP status: 200 - Sucсess
+2. Ожидаемый результат:
+HTTP status: 200 - Sucсess
 
 3. Request headers 
 ```
