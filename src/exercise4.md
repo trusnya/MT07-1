@@ -1683,3 +1683,144 @@ Server: Kestrel
 api-supported-versions: 1.0
 ```
 6. Response body - Нет
+
+
+#Authors
+
+##GET/api​/v1​/Authors
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors
+
+2. HTTP status: 200 - Sucсess
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: ac8f1451-03bb-4170-8de6-c922bbf9ef2b
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
+4. Request body 
+5. Response headers
+6. Response body 
+
+##GET/api​/v1​/Authors​/authors​/books​/{idBook}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##GET/api​/v1​/Authors​/authors​/books​/{idBook}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##GET/api​/v1​/Authors​/{id}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##GET/api​/v1​/Authors​/{id}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##POST/api​/v1​/Authors
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##POST/api​/v1​/Authors
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##POST/api​/v1​/Authors
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##POST/api​/v1​/Authors
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##PUT/api​/v1​/Authors​/{id}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##PUT/api​/v1​/Authors​/{id}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##PUT/api​/v1​/Authors​/{id}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##PUT/api​/v1​/Authors​/{id}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
+
+##DELETE/api​/v1​/Authors​/{id}
+
+1. 
+2. 
+3. Request headers 
+4. Request body 
+5. Response headers
+6. Response body 
