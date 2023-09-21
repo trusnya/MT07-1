@@ -1685,9 +1685,9 @@ api-supported-versions: 1.0
 6. Response body - Нет
 
 
-#Authors
+# Authors
 
-##GET/api​/v1​/Authors
+## GET/api​/v1​/Authors
 
 1. https://fakerestapi.azurewebsites.net/api/v1/Authors
 
@@ -1705,10 +1705,52 @@ Connection: keep-alive
 ```
 
 4. Request body 
-5. Response headers
-6. Response body 
+```
+[
+    {
+        "id": 1,
+        "idBook": 1,
+        "firstName": "First Name 1",
+        "lastName": "Last Name 1"
+    },
+    ...
+]
+```
 
-##GET/api​/v1​/Authors​/authors​/books​/{idBook}
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 09:29:34 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+
+6. Response body 
+```
+[
+    {
+        "id":1,
+        "idBook":1,
+        "firstName":"First Name 1",
+        "lastName":"Last Name 1"
+    },
+    {
+        "id":2,
+        "idBook":1,
+        "firstName":"First Name 2",
+        "lastName":"Last Name 2"
+    },
+    {
+        "id":3,"idBook":1,
+        "firstName":"First Name 3",
+        "lastName":"Last Name 3"
+    },
+    ...
+]
+```
+
+## GET/api​/v1​/Authors​/authors​/books​/{idBook}
 
 1. 
 2. 
@@ -1717,7 +1759,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##GET/api​/v1​/Authors​/authors​/books​/{idBook}
+## GET/api​/v1​/Authors​/authors​/books​/{idBook}
 
 1. 
 2. 
@@ -1726,7 +1768,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##GET/api​/v1​/Authors​/{id}
+## GET/api​/v1​/Authors​/{id}
 
 1. 
 2. 
@@ -1735,7 +1777,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##GET/api​/v1​/Authors​/{id}
+## GET/api​/v1​/Authors​/{id}
 
 1. 
 2. 
@@ -1744,7 +1786,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##POST/api​/v1​/Authors
+## POST/api​/v1​/Authors
 
 1. 
 2. 
@@ -1753,7 +1795,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##POST/api​/v1​/Authors
+## POST/api​/v1​/Authors
 
 1. 
 2. 
@@ -1762,7 +1804,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##POST/api​/v1​/Authors
+## POST/api​/v1​/Authors
 
 1. 
 2. 
@@ -1771,7 +1813,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##POST/api​/v1​/Authors
+## POST/api​/v1​/Authors
 
 1. 
 2. 
@@ -1780,7 +1822,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##PUT/api​/v1​/Authors​/{id}
+## PUT/api​/v1​/Authors​/{id}
 
 1. 
 2. 
@@ -1789,7 +1831,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##PUT/api​/v1​/Authors​/{id}
+## PUT/api​/v1​/Authors​/{id}
 
 1. 
 2. 
@@ -1798,7 +1840,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##PUT/api​/v1​/Authors​/{id}
+## PUT/api​/v1​/Authors​/{id}
 
 1. 
 2. 
@@ -1807,7 +1849,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##PUT/api​/v1​/Authors​/{id}
+## PUT/api​/v1​/Authors​/{id}
 
 1. 
 2. 
@@ -1816,7 +1858,7 @@ Connection: keep-alive
 5. Response headers
 6. Response body 
 
-##DELETE/api​/v1​/Authors​/{id}
+## DELETE/api​/v1​/Authors​/{id}
 
 1. 
 2. 
