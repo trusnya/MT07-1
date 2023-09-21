@@ -1795,7 +1795,8 @@ api-supported-versions: 1.0
         "firstName":"First Name 13",
         "lastName":"Last Name 13"
         },
-        {"id":14,
+        {
+        "id":14,
         "idBook":5,
         "firstName":"First Name 14",
         "lastName":"Last Name 14"
