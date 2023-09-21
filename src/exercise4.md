@@ -1752,12 +1752,66 @@ api-supported-versions: 1.0
 
 ## GET/api​/v1​/Authors​/authors​/books​/{idBook}
 
-1. 
-2. 
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/5
+
+2. HTTP status: 200 - Sucсess
+
 3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 43b12b49-2868-4716-b839-e29b833a2429
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
 4. Request body 
+```
+[
+    {
+        "id": 13,
+        "idBook": 5,
+        "firstName": "First Name 13",
+        "lastName": "Last Name 13"
+    },
+    ...
+]
+```
 5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 11:23:41 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
 6. Response body 
+```
+[
+    {
+        "id":13,"idBook":5,
+        "firstName":"First Name 13",
+        "lastName":"Last Name 13"
+        },
+        {"id":14,
+        "idBook":5,
+        "firstName":"First Name 14",
+        "lastName":"Last Name 14"
+        },
+        {"id":15,
+        "idBook":5,
+        "firstName":"First Name 15",
+        "lastName":"Last Name 15"
+        },
+        {"id":16,
+        "idBook":5,
+        "firstName":"First Name 16",
+        "lastName":"Last Name 16"
+        }
+        ]
+```
 
 ## GET/api​/v1​/Authors​/authors​/books​/{idBook}
 
