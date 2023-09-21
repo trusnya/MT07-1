@@ -1818,52 +1818,244 @@ api-supported-versions: 1.0
 
 ## GET/api​/v1​/Authors​/authors​/books​/{idBook}
 
-1. 
-2. 
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/10000000000
+
+2. HTTP status: 400 Error: Bad Request
+
 3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 822900d4-2ea9-4f7c-9c10-853cc54cef13
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
 4. Request body 
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-e9b19d61fca0dc45a7405292d95a9607-fd6294c9117ede4c-00",
+    "errors": {
+        "idBook": [
+            "The value '10000000000' is not valid."
+        ]
+    }
+}
+```
 5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 13:28:11 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+
 6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.",
+    "status":400,"traceId":"00-e9b19d61fca0dc45a7405292d95a9607-fd6294c9117ede4c-00",
+    "errors":
+    {
+    "idBook":["The value '10000000000' is not valid."]
+    }
+}
+```
 
 ## GET/api​/v1​/Authors​/{id}
 
-1. 
-2. 
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5 
+
+2. HTTP status: 200 - Sucсess
+
 3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 7d3658d4-2d08-46dc-9467-2ce9a0f329cb
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
 4. Request body 
+```
+{
+    "id": 5,
+    "idBook": 2,
+    "firstName": "First Name 5",
+    "lastName": "Last Name 5"
+}
+```
 5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 13:42:21 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+
 6. Response body 
+```
+{
+    "id":5,
+    "idBook":2,
+    "firstName":"First Name 5",
+    "lastName":"Last Name 5"
+}
+```
 
 ## GET/api​/v1​/Authors​/{id}
 
-1. 
-2. 
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/10000000000 
+
+2. 400 Error: Bad Request
+
 3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: bb698e92-8319-43a8-86c8-2a69b2bda305
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
 4. Request body 
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-b65276c5bf69d249a8a6ea1d20867c07-78ba963781fda444-00",
+    "errors": {
+        "id": [
+            "The value '10000000000' is not valid."
+        ]
+    }
+}
+```
+
 5. Response headers
-6. Response body 
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 13:47:35 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.",
+    "status":400,
+    "traceId":"00-b65276c5bf69d249a8a6ea1d20867c07-78ba963781fda444-00",
+    "errors":{"id":["The value '10000000000' is not valid."]}
+}
+``` 
 
 ## POST/api​/v1​/Authors
 
-1. 
-2. 
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors
+
+2. HTTP status: 200 - Sucсess
 3. Request headers 
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 3d0a6d87-52b5-4867-b336-3bb486fa166c
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
 4. Request body 
+```
+{
+  "id": 5,
+  "idBook": 6,
+  "firstName": "Hot",
+  "lastName": "Pepper"
+}
+```
+
 5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 13:55:28 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
 6. Response body 
+```
+{
+    "id":5,
+    "idBook":6,
+    "firstName":"Hot",
+    "lastName":"Pepper"
+}
+```
 
 ## POST/api​/v1​/Authors
 
-1. 
-2. 
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors 
+
+2. 400 Error: Bad Request
+
 3. Request headers 
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: a608f16e-97f3-4164-a338-7fa85568e721
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
 4. Request body 
+```
+{
+  "id": crazy,
+  "idBook": 6,
+  "firstName": "Hot",
+  "lastName": "Pepper"
+}
+```
 5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 14:02:37 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+
 6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.",
+    "status":400,"traceId":"00-4818c349c2dbb64798fef52d1ccd25b5-73fa60111c2f9842-00",
+    "errors":{"$.id":["'c' is an invalid start of a value. Path: $.id | LineNumber: 1 | BytePositionInLine: 8."]}
+}
+```
+
 
 ## POST/api​/v1​/Authors
 
-1. 
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors
 2. 
 3. Request headers 
 4. Request body 
