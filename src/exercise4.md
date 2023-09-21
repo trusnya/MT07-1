@@ -1800,12 +1800,14 @@ api-supported-versions: 1.0
         "firstName":"First Name 14",
         "lastName":"Last Name 14"
         },
-        {"id":15,
+        {
+        "id":15,
         "idBook":5,
         "firstName":"First Name 15",
         "lastName":"Last Name 15"
         },
-        {"id":16,
+        {
+        "id":16,
         "idBook":5,
         "firstName":"First Name 16",
         "lastName":"Last Name 16"
