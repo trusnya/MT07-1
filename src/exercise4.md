@@ -629,17 +629,8 @@ Connection: keep-alive
 ```
 
 4. Request body 
-```
-[
-    {
-        "id": 1,
-        "idBook": 1,
-        "firstName": "First Name 1",
-        "lastName": "Last Name 1"
-    },
-    ...
-]
-```
+
+нет
 
 5. Response headers
 ```
