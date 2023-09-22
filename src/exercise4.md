@@ -608,6 +608,654 @@ api-supported-versions: 1.0
 ```
 HTTP status: 200 - Success
 ```
+# Authors
+
+## GET/api​/v1​/Authors
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors
+
+2. Тело ответа корректное, соответствует GET запросу на получение списка авторов 
+HTTP status: 200 - Sucсess
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: ac8f1451-03bb-4170-8de6-c922bbf9ef2b
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
+4. Request body 
+```
+[
+    {
+        "id": 1,
+        "idBook": 1,
+        "firstName": "First Name 1",
+        "lastName": "Last Name 1"
+    },
+    ...
+]
+```
+
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 09:29:34 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+
+6. Response body 
+```
+[
+    {
+        "id":1,
+        "idBook":1,
+        "firstName":"First Name 1",
+        "lastName":"Last Name 1"
+    },
+    {
+        "id":2,
+        "idBook":1,
+        "firstName":"First Name 2",
+        "lastName":"Last Name 2"
+    },
+    {
+        "id":3,"idBook":1,
+        "firstName":"First Name 3",
+        "lastName":"Last Name 3"
+    },
+    ...
+]
+```
+
+## GET/api​/v1​/Authors​/authors​/books​/{idBook}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/5
+
+2. Тело ответа корректное, соответствует GET запросу на получение информации о конкретной книги автора
+HTTP status: 200 - Sucсess
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 43b12b49-2868-4716-b839-e29b833a2429
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
+4. Request body 
+```
+[
+    {
+        "id": 13,
+        "idBook": 5,
+        "firstName": "First Name 13",
+        "lastName": "Last Name 13"
+    },
+    ...
+]
+```
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 11:23:41 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+6. Response body 
+```
+[
+    {
+        "id":13,"idBook":5,
+        "firstName":"First Name 13",
+        "lastName":"Last Name 13"
+        },
+        {
+        "id":14,
+        "idBook":5,
+        "firstName":"First Name 14",
+        "lastName":"Last Name 14"
+        },
+        {
+        "id":15,
+        "idBook":5,
+        "firstName":"First Name 15",
+        "lastName":"Last Name 15"
+        },
+        {
+        "id":16,
+        "idBook":5,
+        "firstName":"First Name 16",
+        "lastName":"Last Name 16"
+        }
+        ]
+```
+
+## GET/api​/v1​/Authors​/authors​/books​/{idBook}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/10000000000
+
+2. Тело ответа корректное, соответствует GET запросу на получение информации о книге с id "10000000000"
+HTTP status: 400 Error: Bad Request
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 822900d4-2ea9-4f7c-9c10-853cc54cef13
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
+4. Request body 
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-e9b19d61fca0dc45a7405292d95a9607-fd6294c9117ede4c-00",
+    "errors": {
+        "idBook": [
+            "The value '10000000000' is not valid."
+        ]
+    }
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 13:28:11 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+
+6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.",
+    "status":400,"traceId":"00-e9b19d61fca0dc45a7405292d95a9607-fd6294c9117ede4c-00",
+    "errors":
+    {
+    "idBook":["The value '10000000000' is not valid."]
+    }
+}
+```
+
+## GET/api​/v1​/Authors​/{id}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5 
+
+2. Тело ответа корректное, соответствует GET запросу на получение информации об авторах с id 5
+HTTP status: 200 - Sucсess
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 7d3658d4-2d08-46dc-9467-2ce9a0f329cb
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
+4. Request body 
+```
+{
+    "id": 5,
+    "idBook": 2,
+    "firstName": "First Name 5",
+    "lastName": "Last Name 5"
+}
+```
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 13:42:21 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+
+6. Response body 
+```
+{
+    "id":5,
+    "idBook":2,
+    "firstName":"First Name 5",
+    "lastName":"Last Name 5"
+}
+```
+
+## GET/api​/v1​/Authors​/{id}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/10000000000 
+
+2. Тело ответа корректное, соответствует GET-запросу о конкретном авторе с id "10000000000"
+HTTP status: 400 Error Bad Request
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: bb698e92-8319-43a8-86c8-2a69b2bda305
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
+4. Request body 
+```
+{
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title": "One or more validation errors occurred.",
+    "status": 400,
+    "traceId": "00-b65276c5bf69d249a8a6ea1d20867c07-78ba963781fda444-00",
+    "errors": {
+        "id": [
+            "The value '10000000000' is not valid."
+        ]
+    }
+}
+```
+
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 13:47:35 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.",
+    "status":400,
+    "traceId":"00-b65276c5bf69d249a8a6ea1d20867c07-78ba963781fda444-00",
+    "errors":{"id":["The value '10000000000' is not valid."]}
+}
+``` 
+
+## POST/api​/v1​/Authors
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors
+
+2. Тело ответа корректное, соответствует POST-запросу на создание нового автора
+HTTP status: 200 - Sucсess
+
+3. Request headers 
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 3d0a6d87-52b5-4867-b336-3bb486fa166c
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body 
+```
+{
+  "id": 5,
+  "idBook": 6,
+  "firstName": "Hot",
+  "lastName": "Pepper"
+}
+```
+
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 13:55:28 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+6. Response body 
+```
+{
+    "id":5,
+    "idBook":6,
+    "firstName":"Hot",
+    "lastName":"Pepper"
+}
+```
+
+## POST/api​/v1​/Authors
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors 
+
+2. Тело ответа корректное, соответствует введенному невалидному id автора
+HTTP status: 400 Error Bad Request
+
+3. Request headers 
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: a608f16e-97f3-4164-a338-7fa85568e721
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+
+4. Request body 
+```
+{
+  "id": crazy,
+  "idBook": 6,
+  "firstName": "Hot",
+  "lastName": "Pepper"
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 14:02:37 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+
+6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.",
+    "status":400,"traceId":"00-4818c349c2dbb64798fef52d1ccd25b5-73fa60111c2f9842-00",
+    "errors":{"$.id":["'c' is an invalid start of a value. Path: $.id | LineNumber: 1 | BytePositionInLine: 8."]}
+}
+```
+
+## POST/api​/v1​/Authors
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors 
+
+2. Тело ответа корректное, соответствует введенному пустому запросу
+HTTP status: 415 Unsupported Media Type
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: f545aad8-54b2-459e-8e62-75359dc19d53
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body 
+
+нет
+
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 14:16:17 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.13",
+    "title":"Unsupported Media Type","status":415,
+    "traceId":"00-0fabae03bf20bb43b651fb5736d5cb09-5d5de20119aee64d-00"
+    }
+```
+## POST/api​/v1​/Authors
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors
+
+2. Тело ответа корректное, соответствует неверно введенному запросу 
+HTTP status: 400 Error Bad Request
+
+3. Request headers 
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: aac7abe7-074f-4642-9fbf-18d4893cbafe
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body 
+```
+{
+  "id": 0,
+  "idBook": 0,
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 14:25:11 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.",
+    "status":400,
+    "traceId":"00-9a68f9c4b3ff16478f1594d93dcc1fdb-e76ab5de176b6b4c-00",
+    "errors":{"$":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 3 | BytePositionInLine: 0."]}
+}
+```
+## PUT/api​/v1​/Authors​/{id}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
+
+2. Тело ответа корректное, соответствует введенным данным
+HTTP status: 200 - Sucсess
+
+3. Request headers 
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: d78a1f05-5697-4590-a245-2c978065cb19
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body 
+```
+{
+  "id": 5,
+  "idBook": 5,
+  "firstName": "Hot",
+  "lastName": "Pepper"
+}
+```
+5. Response headers
+```
+Content-Type: application/json; charset=utf-8; v=1.0
+Date: Thu, 21 Sep 2023 14:30:18 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+api-supported-versions: 1.0
+```
+6. Response body 
+```
+{
+    "id":5,
+    "idBook":5,
+    "firstName":"Hot",
+    "lastName":"Pepper"
+}
+```
+## PUT/api​/v1​/Authors​/{id}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
+
+2. Тело ответа корректное, соответствует введенным некорректно данным
+HTTP status: 400 Error Bad Request
+
+3. Request headers 
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: d2c07f69-f10a-4cdf-874b-58eb4dc220d8
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body 
+```
+{
+  "id": 5,
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 14:35:18 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.","status":400,
+    "traceId":"00-82f48459c3068447a9dbebc9a8534ef2-b052e7ba2e57664b-00",
+    "errors":{"$":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 2 | BytePositionInLine: 0."]}
+}
+```
+## PUT/api​/v1​/Authors​/{id}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
+
+2. Тело ответа корректное, соответствует запросу с пустым телом
+HTTP status: 415 Unsupported Media Type
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 17bccb20-b5bc-4311-86a4-ad9c06ea6aad
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body 
+
+нет
+
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 14:39:36 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.13",
+    "title":"Unsupported Media Type",
+    "status":415,"traceId":"00-c0363fe07370b04c99c284eada7075b5-7832008ba9b3de44-00"
+}
+```
+## PUT/api​/v1​/Authors​/{id}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
+
+2. Тело ответа корректное, соответствует введенному неверно id
+HTTP status: 400 Error Bad Request
+
+3. Request headers
+```
+Content-Type: application/json
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 31f47915-0225-4598-b725-57ecb5e75886
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body 
+```
+{
+  "id": crazy,
+  "idBook": 0,
+  "firstName": "string",3
+  "lastName": "string"
+}
+```
+5. Response headers
+```
+Content-Type: application/problem+json; charset=utf-8
+Date: Thu, 21 Sep 2023 14:45:19 GMT
+Server: Kestrel
+Transfer-Encoding: chunked
+```
+6. Response body 
+```
+{
+    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
+    "title":"One or more validation errors occurred.",
+    "status":400,
+    "traceId":"00-ebef3f93bc592f428f8e2fb6f49acae2-f692ec4c5804034d-00",
+    "errors":{"$.id":["'c' is an invalid start of a value. Path: $.id | LineNumber: 1 | BytePositionInLine: 8."]}
+}
+```
+## DELETE/api​/v1​/Authors​/{id}
+
+1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
+
+2. Ожидаемый результат:
+HTTP status: 200 - Sucсess
+
+3. Request headers 
+```
+User-Agent: PostmanRuntime/7.33.0
+Accept: */*
+Cache-Control: no-cache
+Postman-Token: 17c0abc7-6a5a-4555-9b2c-6ba0826a49f6
+Host: fakerestapi.azurewebsites.net
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+```
+4. Request body 
+
+нет
+
+5. Response headers
+```
+Content-Length: 0
+Date: Thu, 21 Sep 2023 14:54:14 GMT
+Server: Kestrel
+api-supported-versions: 1.0
+```
+6. Response body 
+нет
+
 # CoverPhotos:
 
 ## GET/api/v1/CoverPhotos
@@ -1685,667 +2333,3 @@ api-supported-versions: 1.0
 6. Response body - Нет
 
 
-# Authors
-
-## GET/api​/v1​/Authors
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors
-
-2. Тело ответа корректное, соответствует GET запросу на получение списка авторов 
-HTTP status: 200 - Sucсess
-
-3. Request headers 
-```
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: ac8f1451-03bb-4170-8de6-c922bbf9ef2b
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-[
-    {
-        "id": 1,
-        "idBook": 1,
-        "firstName": "First Name 1",
-        "lastName": "Last Name 1"
-    },
-    ...
-]
-```
-
-5. Response headers
-```
-Content-Type: application/json; charset=utf-8; v=1.0
-Date: Thu, 21 Sep 2023 09:29:34 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-api-supported-versions: 1.0
-```
-
-6. Response body 
-```
-[
-    {
-        "id":1,
-        "idBook":1,
-        "firstName":"First Name 1",
-        "lastName":"Last Name 1"
-    },
-    {
-        "id":2,
-        "idBook":1,
-        "firstName":"First Name 2",
-        "lastName":"Last Name 2"
-    },
-    {
-        "id":3,"idBook":1,
-        "firstName":"First Name 3",
-        "lastName":"Last Name 3"
-    },
-    ...
-]
-```
-
-## GET/api​/v1​/Authors​/authors​/books​/{idBook}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/5
-
-2. Тело ответа корректное, соответствует GET запросу на получение информации о конкретной книги автора
-HTTP status: 200 - Sucсess
-
-3. Request headers 
-```
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 43b12b49-2868-4716-b839-e29b833a2429
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-[
-    {
-        "id": 13,
-        "idBook": 5,
-        "firstName": "First Name 13",
-        "lastName": "Last Name 13"
-    },
-    ...
-]
-```
-5. Response headers
-```
-Content-Type: application/json; charset=utf-8; v=1.0
-Date: Thu, 21 Sep 2023 11:23:41 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-api-supported-versions: 1.0
-```
-6. Response body 
-```
-[
-    {
-        "id":13,"idBook":5,
-        "firstName":"First Name 13",
-        "lastName":"Last Name 13"
-        },
-        {
-        "id":14,
-        "idBook":5,
-        "firstName":"First Name 14",
-        "lastName":"Last Name 14"
-        },
-        {
-        "id":15,
-        "idBook":5,
-        "firstName":"First Name 15",
-        "lastName":"Last Name 15"
-        },
-        {
-        "id":16,
-        "idBook":5,
-        "firstName":"First Name 16",
-        "lastName":"Last Name 16"
-        }
-        ]
-```
-
-## GET/api​/v1​/Authors​/authors​/books​/{idBook}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/10000000000
-
-2. Тело ответа корректное, соответствует GET запросу на получение информации о книге с id "10000000000"
-HTTP status: 400 Error: Bad Request
-
-3. Request headers 
-```
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 822900d4-2ea9-4f7c-9c10-853cc54cef13
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-{
-    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
-    "title": "One or more validation errors occurred.",
-    "status": 400,
-    "traceId": "00-e9b19d61fca0dc45a7405292d95a9607-fd6294c9117ede4c-00",
-    "errors": {
-        "idBook": [
-            "The value '10000000000' is not valid."
-        ]
-    }
-}
-```
-5. Response headers
-```
-Content-Type: application/problem+json; charset=utf-8
-Date: Thu, 21 Sep 2023 13:28:11 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-```
-
-6. Response body 
-```
-{
-    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
-    "title":"One or more validation errors occurred.",
-    "status":400,"traceId":"00-e9b19d61fca0dc45a7405292d95a9607-fd6294c9117ede4c-00",
-    "errors":
-    {
-    "idBook":["The value '10000000000' is not valid."]
-    }
-}
-```
-
-## GET/api​/v1​/Authors​/{id}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5 
-
-2. Тело ответа корректное, соответствует GET запросу на получение информации об авторах с id 5
-HTTP status: 200 - Sucсess
-
-3. Request headers 
-```
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 7d3658d4-2d08-46dc-9467-2ce9a0f329cb
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-{
-    "id": 5,
-    "idBook": 2,
-    "firstName": "First Name 5",
-    "lastName": "Last Name 5"
-}
-```
-5. Response headers
-```
-Content-Type: application/json; charset=utf-8; v=1.0
-Date: Thu, 21 Sep 2023 13:42:21 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-api-supported-versions: 1.0
-```
-
-6. Response body 
-```
-{
-    "id":5,
-    "idBook":2,
-    "firstName":"First Name 5",
-    "lastName":"Last Name 5"
-}
-```
-
-## GET/api​/v1​/Authors​/{id}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/10000000000 
-
-2. Тело ответа корректное, соответствует GET-запросу о конкретном авторе с id "10000000000"
-HTTP status: 400 Error Bad Request
-
-3. Request headers 
-```
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: bb698e92-8319-43a8-86c8-2a69b2bda305
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-{
-    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
-    "title": "One or more validation errors occurred.",
-    "status": 400,
-    "traceId": "00-b65276c5bf69d249a8a6ea1d20867c07-78ba963781fda444-00",
-    "errors": {
-        "id": [
-            "The value '10000000000' is not valid."
-        ]
-    }
-}
-```
-
-5. Response headers
-```
-Content-Type: application/problem+json; charset=utf-8
-Date: Thu, 21 Sep 2023 13:47:35 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-```
-6. Response body
-```
-{
-    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
-    "title":"One or more validation errors occurred.",
-    "status":400,
-    "traceId":"00-b65276c5bf69d249a8a6ea1d20867c07-78ba963781fda444-00",
-    "errors":{"id":["The value '10000000000' is not valid."]}
-}
-``` 
-
-## POST/api​/v1​/Authors
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors
-
-2. Тело ответа корректное, соответствует POST-запросу на создание нового автора
-HTTP status: 200 - Sucсess
-
-3. Request headers 
-```
-Content-Type: application/json
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 3d0a6d87-52b5-4867-b336-3bb486fa166c
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-4. Request body 
-```
-{
-  "id": 5,
-  "idBook": 6,
-  "firstName": "Hot",
-  "lastName": "Pepper"
-}
-```
-
-5. Response headers
-```
-Content-Type: application/json; charset=utf-8; v=1.0
-Date: Thu, 21 Sep 2023 13:55:28 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-api-supported-versions: 1.0
-```
-6. Response body 
-```
-{
-    "id":5,
-    "idBook":6,
-    "firstName":"Hot",
-    "lastName":"Pepper"
-}
-```
-
-## POST/api​/v1​/Authors
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors 
-
-2. Тело ответа корректное, соответствует введенному невалидному id автора
-HTTP status: 400 Error Bad Request
-
-3. Request headers 
-```
-Content-Type: application/json
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: a608f16e-97f3-4164-a338-7fa85568e721
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-{
-  "id": crazy,
-  "idBook": 6,
-  "firstName": "Hot",
-  "lastName": "Pepper"
-}
-```
-5. Response headers
-```
-Content-Type: application/problem+json; charset=utf-8
-Date: Thu, 21 Sep 2023 14:02:37 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-```
-
-6. Response body 
-```
-{
-    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
-    "title":"One or more validation errors occurred.",
-    "status":400,"traceId":"00-4818c349c2dbb64798fef52d1ccd25b5-73fa60111c2f9842-00",
-    "errors":{"$.id":["'c' is an invalid start of a value. Path: $.id | LineNumber: 1 | BytePositionInLine: 8."]}
-}
-```
-
-
-## POST/api​/v1​/Authors
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors 
-
-2. Тело ответа корректное, соответствует введенному пустому запросу
-HTTP status: 415 Unsupported Media Type
-
-3. Request headers 
-```
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: f545aad8-54b2-459e-8e62-75359dc19d53
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-
-нет
-
-5. Response headers
-```
-Content-Type: application/problem+json; charset=utf-8
-Date: Thu, 21 Sep 2023 14:16:17 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-```
-6. Response body 
-```
-{
-    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.13",
-    "title":"Unsupported Media Type","status":415,
-    "traceId":"00-0fabae03bf20bb43b651fb5736d5cb09-5d5de20119aee64d-00"
-    }
-```
-
-## POST/api​/v1​/Authors
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors
-
-2. Тело ответа корректное, соответствует неверно введенному запросу 
-HTTP status: 400 Error Bad Request
-
-3. Request headers 
-```
-Content-Type: application/json
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: aac7abe7-074f-4642-9fbf-18d4893cbafe
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-{
-  "id": 0,
-  "idBook": 0,
-}
-```
-
-5. Response headers
-```
-Content-Type: application/problem+json; charset=utf-8
-Date: Thu, 21 Sep 2023 14:25:11 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-```
-
-6. Response body 
-```
-{
-    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
-    "title":"One or more validation errors occurred.",
-    "status":400,
-    "traceId":"00-9a68f9c4b3ff16478f1594d93dcc1fdb-e76ab5de176b6b4c-00",
-    "errors":{"$":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 3 | BytePositionInLine: 0."]}
-}
-```
-
-## PUT/api​/v1​/Authors​/{id}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
-
-2. Тело ответа корректное, соответствует введенным данным
-HTTP status: 200 - Sucсess
-
-3. Request headers 
-```
-Content-Type: application/json
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: d78a1f05-5697-4590-a245-2c978065cb19
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-4. Request body 
-```
-{
-  "id": 5,
-  "idBook": 5,
-  "firstName": "Hot",
-  "lastName": "Pepper"
-}
-```
-
-5. Response headers
-```
-Content-Type: application/json; charset=utf-8; v=1.0
-Date: Thu, 21 Sep 2023 14:30:18 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-api-supported-versions: 1.0
-```
-6. Response body 
-```
-{
-    "id":5,
-    "idBook":5,
-    "firstName":"Hot",
-    "lastName":"Pepper"
-}
-```
-
-## PUT/api​/v1​/Authors​/{id}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
-
-2. Тело ответа корректное, соответствует введенным некорректно данным
-HTTP status: 400 Error Bad Request
-
-3. Request headers 
-```
-Content-Type: application/json
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: d2c07f69-f10a-4cdf-874b-58eb4dc220d8
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-{
-  "id": 5,
-}
-```
-5. Response headers
-```
-Content-Type: application/problem+json; charset=utf-8
-Date: Thu, 21 Sep 2023 14:35:18 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-```
-6. Response body 
-```
-{
-    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
-    "title":"One or more validation errors occurred.","status":400,
-    "traceId":"00-82f48459c3068447a9dbebc9a8534ef2-b052e7ba2e57664b-00",
-    "errors":{"$":["The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 2 | BytePositionInLine: 0."]}
-}
-```
-
-## PUT/api​/v1​/Authors​/{id}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
-
-2. Тело ответа корректное, соответствует запросу с пустым телом
-HTTP status: 415 Unsupported Media Type
-
-3. Request headers 
-```
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 17bccb20-b5bc-4311-86a4-ad9c06ea6aad
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-
-нет
-
-5. Response headers
-```
-Content-Type: application/problem+json; charset=utf-8
-Date: Thu, 21 Sep 2023 14:39:36 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-```
-6. Response body 
-```
-{
-    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.13",
-    "title":"Unsupported Media Type",
-    "status":415,"traceId":"00-c0363fe07370b04c99c284eada7075b5-7832008ba9b3de44-00"
-}
-```
-
-## PUT/api​/v1​/Authors​/{id}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
-
-2. Тело ответа корректное, соответствует введенному неверно id
-HTTP status: 400 Error Bad Request
-
-3. Request headers
-```
-Content-Type: application/json
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 31f47915-0225-4598-b725-57ecb5e75886
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-```
-{
-  "id": crazy,
-  "idBook": 0,
-  "firstName": "string",3
-  "lastName": "string"
-}
-```
-
-5. Response headers
-```
-Content-Type: application/problem+json; charset=utf-8
-Date: Thu, 21 Sep 2023 14:45:19 GMT
-Server: Kestrel
-Transfer-Encoding: chunked
-```
-6. Response body 
-```
-{
-    "type":"https://tools.ietf.org/html/rfc7231#section-6.5.1",
-    "title":"One or more validation errors occurred.",
-    "status":400,
-    "traceId":"00-ebef3f93bc592f428f8e2fb6f49acae2-f692ec4c5804034d-00",
-    "errors":{"$.id":["'c' is an invalid start of a value. Path: $.id | LineNumber: 1 | BytePositionInLine: 8."]}
-}
-```
-
-## DELETE/api​/v1​/Authors​/{id}
-
-1. https://fakerestapi.azurewebsites.net/api/v1/Authors/5
-
-2. Ожидаемый результат:
-HTTP status: 200 - Sucсess
-
-3. Request headers 
-```
-User-Agent: PostmanRuntime/7.33.0
-Accept: */*
-Cache-Control: no-cache
-Postman-Token: 17c0abc7-6a5a-4555-9b2c-6ba0826a49f6
-Host: fakerestapi.azurewebsites.net
-Accept-Encoding: gzip, deflate, br
-Connection: keep-alive
-```
-
-4. Request body 
-
-нет
-
-5. Response headers
-```
-Content-Length: 0
-Date: Thu, 21 Sep 2023 14:54:14 GMT
-Server: Kestrel
-api-supported-versions: 1.0
-```
-6. Response body 
-нет
