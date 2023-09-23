@@ -1,17 +1,8 @@
-# Пример: 
-
-1. URL (вставляйте его прямо со скобками, например, "https://fakerestapi.azurewebsites.net/api/v1/Activities/{{activity_id}}")
-2. Ожидаемый результат (своими словами) + HTTPS status
-3. Заголовки запроса - Request headers (можно посмотреть через консоль в левом нижнем углу)
-4. Тело запроса - Request body (если тело слишком большое, то только его часть)
-5. Заголовки ответа - Response headers
-6. Тело ответа - Response body (если тело слишком большое, то только его часть)
-
 # Activities
 
 ## GET/api/v1/Activitie
 
-1. URL  
+1. URL 
 
 https://fakerestapi.azurewebsites.net/api/v1/Activities
 
@@ -477,13 +468,13 @@ api-supported-versions: 1.0
 
 https://fakerestapi.azurewebsites.net/api/v1/Activities/5
 
-2.Ожидаемый результат 
+2. Ожидаемый результат 
   
 Тело ответа корректное, содержит сообщение о том, что допущена ошибка 
 
 HTTP status:415 Unsupported Media Type
 
-3.Заголовки запроса 
+3. Заголовки запроса 
   
 Request Headers
 ```
@@ -495,10 +486,10 @@ Host: fakerestapi.azurewebsites.net
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 ```
-4.Тело запроса 
+4. Тело запроса 
 ```
 ```  
-5.Заголовки ответа
+5. Заголовки ответа
 ```
 Content-Type: application/json; charset=utf-8; v=1.0
 Date: Tue, 19 Sep 2023 09:56:44 GMT
@@ -506,7 +497,7 @@ Server: Kestrel
 Transfer-Encoding: chunked
 api-supported-versions: 1.0
 ```
-6.Тело ответа 
+6. Тело ответа 
 ```
 {
     "type": "https://tools.ietf.org/html/rfc7231#section-6.5.13",
@@ -574,7 +565,7 @@ api-supported-versions: 1.0
 
 1. URL  
 
-(https://fakerestapi.azurewebsites.net/api/v1/Activities/5)
+https://fakerestapi.azurewebsites.net/api/v1/Activities/5
 
 2. Ожидаемый результат 
   
@@ -1245,7 +1236,961 @@ Server: Kestrel
 api-supported-versions: 1.0
 ```
 6. Response body 
+
 нет
+
+# Books   
+
+## GET​/api​/v1​/Books  
+
+1. URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books   
+
+2. Ожидаемый результат   
+
+Тело ответа корректное, соответствует GET запросу на получение списка авторов  
+
+HTTP status: 200 - Sucсess   
+
+3. Заголовки запроса - Request headers 
+``` 
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: 236a1745-0896-4be1-9486-7e7f3ab8af19 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive   
+
+```
+4. Тело запроса - Request body   
+
+нет   
+
+5. Заголовки ответа - Response headers   
+```   
+Content-Type: application/json; charset=utf-8; v=1.0 
+
+Date: Fri, 22 Sep 2023 14:01:33 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+
+api-supported-versions: 1.0 
+
+```     
+6. Тело ответа - Response body  
+```   
+
+[{"id":1,"title":"Book 1","description":"Dolore consequat sit labore amet elitr diam in magna labore labore. Ipsum et eos dolor kasd sanctus sea velit diam elitr doming sit dolor elitr et dolor. Duo nonumy consectetuer ipsum est labore placerat sed delenit magna at sed dignissim. Nonummy kasd est erat dolores duo facilisis ea.\n","pageCount":100,"excerpt":"Accusam nonumy ut euismod takimata dolor "},... 
+
+```   
+## POST/api/v1/Books   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books 
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, соответствует POST-запросу на создание новой книги  
+
+HTTP status: 200 - Sucсess   
+
+3.	Заголовки запроса - Request headers   
+``` 
+
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: 59a95c2f-41ec-4ccc-9d3b-28ded92f2978 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+
+``` 
+4.	Тело запроса - Request body  
+``` 
+{ 
+ "id": 205, 
+
+ "title": "mama", 
+
+ "description": "papa", 
+
+ "pageCount": 1000, 
+
+ "excerpt": "my", 
+
+ "publishDate": "2023-09-20T21:00:52.702Z" 
+} 
+``` 
+5.	Заголовки ответа - Response headers  
+
+```   
+Content-Type: application/json; charset=utf-8; v=1.0 
+
+Date: Fri, 22 Sep 2023 18:34:30 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+
+api-supported-versions: 1.0 
+``` 
+6.	Тело ответа - Response body    
+``` 
+{"id":205,"title":"mama","description":"papa","pageCount":1000,"excerpt":"my","publishDate":"2023-09-20T21:00:52.702Z"}   
+```   
+## POST/api/v1/Books 
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books   
+
+2.	 Ожидаемый результат  
+
+Тело ответа корректное, содержит сообщение о том, что допущена ошибка  
+
+HTTP status: 400 Bad Request 
+
+3.	Заголовки запроса - Request headers   
+```
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: 689378d6-1106-4561-ba6a-34d94c6e1219 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+
+``` 
+4.	Тело запроса - Request body   
+``` 
+{ 
+ "id": null, 
+
+ "title": "string", 
+
+ "description": "string", 
+
+ "pageCount": 0, 
+
+ "excerpt": "string", 
+
+ "publishDate": "2023-09-20T21:07:26.912Z" 
+} 
+``` 
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Type: application/problem+json; charset=utf-8 
+
+Date: Fri, 22 Sep 2023 18:44:27 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+
+```   
+6.	Тело ответа - Response body    
+
+``` 
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-f3e0453a7c952d4696b174f02dff03e2-de77b03f795c4445-00","errors":{"$.id":["The JSON value could not be converted to System.Int32. Path: $.id | LineNumber: 1 | BytePositionInLine: 11."]}} 
+
+```   
+## POST/api/v1/Books 
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books   
+
+2.	Ожидаемый результат  
+
+Тело ответа корректное, содержит сообщение о недопустимом значении   
+
+HTTP status: 400 Bad Request 
+
+3.	Заголовки запроса - Request headers   
+
+``` 
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: 4ae253fb-bb80-4c9c-a1b1-c60c205eee1b 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+
+```   
+4.	Тело запроса - Request body   
+``` 
+{ 
+ null 
+
+ "excerpt": "string", 
+
+ "publishDate": "2023-09-20T21:36:29.766Z" 
+} 
+```   
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Type: application/problem+json; charset=utf-8 
+
+Date: Fri, 22 Sep 2023 18:51:47 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+```   
+6.	Тело ответа - Response body    
+``` 
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-6442445ea9c3f24082086a8ce4b6c880-03650e438b5f3f4b-00","errors":{"$":["'n' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 1 | BytePositionInLine: 1."]}}   
+``` 
+## POST/api/v1/Books  
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books   
+
+2.	Ожидаемый результат  
+
+Тело ответа корректное, содержит сообщение о недопустимом значении   
+
+HTTP status: 400 Bad Request 
+
+3.	Заголовки запроса - Request headers   
+
+``` 
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: 9b27315a-9cfe-4077-9aaa-a1379a603c0d 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+
+```   
+4.	Тело запроса - Request body   
+
+``` 
+{ 
+ "id": 0, 
+
+ "title": , 
+
+ "description": "string", 
+
+ "pageCount": 0, 
+
+ "excerpt": "string", 
+
+ "publishDate": "2023-09-20T22:11:07.016Z" 
+} 
+```   
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Type: application/problem+json; charset=utf-8 
+
+Date: Fri, 22 Sep 2023 18:58:24 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+
+```   
+6.	Тело ответа - Response body    
+
+``` 
+{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-7ec30b78e4d6c84a9b1bc4b3374ad2f9-2065de3b6605dc49-00","errors":{"$.title":["',' is an invalid start of a value. Path: $.title | LineNumber: 2 | BytePositionInLine: 10."]}} 
+
+``` 
+## POST/api/v1/Books  
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books   
+
+2.	Ожидаемый результат  
+
+Тело ответа корректное, содержит сообщение об ошибке   
+
+HTTP status: 400 Bad Request 
+
+3.	Заголовки запроса - Request headers   
+``` 
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: fb5ac971-c5b0-46a3-9cf3-39a3314f76fc 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+```  
+4.	Тело запроса - Request body   
+
+нет   
+
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Length: 0 
+
+Date: Fri, 22 Sep 2023 19:03:12 GMT 
+
+Server: Kestrel 
+```  
+6.	Тело ответа - Response body    
+``` 
+{ 
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.13", 
+
+    "title": "Unsupported Media Type", 
+
+    "status": 415, 
+
+    "traceId": "00-64fff230f00c9a469994eb67dbabb6d1-022ec522b89d4a4e-00" 
+} 
+```   
+## POST/api/v1/Books  
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books   
+
+2.	Ожидаемый результат  
+
+Тело ответа корректное, содержит сообщение, что JSON неверный 
+
+HTTP status: 400 Bad Request 
+
+3.	Заголовки запроса - Request headers   
+``` 
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: ae69a973-d1bc-4fa3-a515-b129d2a62515 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+```   
+4.	Тело запроса - Request body   
+``` 
+{ 
+
+ "id": 0, 
+
+ "title": 1, 
+
+ "description": "string", 
+
+ "pageCount": 0, 
+
+ "excerpt": "string", 
+
+ "publishDate": "2023-09-22T03:41:57.286Z" 
+} 
+``` 
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Type: application/problem+json; charset=utf-8 
+
+Date: Fri, 22 Sep 2023 19:13:06 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+```   
+6.	Тело ответа - Response body    
+``` 
+{ 
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1", 
+
+    "title": "One or more validation errors occurred.", 
+
+    "status": 400, 
+
+    "traceId": "00-e9671a2ebe545f4798019c8cd4ce2bf8-db96a60dbeede14d-00", 
+
+    "errors": { 
+
+        "$.title": [ 
+
+            "The JSON value could not be converted to System.String. Path: $.title | LineNumber: 2 | BytePositionInLine: 11." 
+        ] 
+    } 
+} 
+``` 
+## GET​/api​/v1​/Books​/{id}   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/30   
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, соответствует GET запросу на получение книги с указанным id  
+
+HTTP status: 200 - Sucсess     
+
+3.	Заголовки запроса - Request headers  
+``` 
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: 6fbad10b-4e86-4169-9f0e-29d6b96b90f8 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+```  
+4.	Тело запроса - Request body   
+
+нет   
+
+5.	Заголовки ответа - Response headers   
+```
+Content-Type: application/json; charset=utf-8; v=1.0 
+
+Date: Fri, 22 Sep 2023 19:30:50 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+
+api-supported-versions: 1.0 
+```   
+6.	Тело ответа - Response body    
+``` 
+{ 
+    "id": 30, 
+
+    "title": "Book 30", 
+
+    "description": "Stet no dolor labore aliquip sadipscing ea ut dolor molestie autem placerat nostrud amet ut. Ut veniam dolor sit duis nonumy labore consequat accusam kasd ex no magna at facilisis. Accusam voluptua et laoreet duo eos. Rebum esse elitr rebum doming consequat dolor eum assum takimata nonumy no ipsum est accusam te labore. In tempor et sea dolor labore magna justo eirmod ullamcorper eum hendrerit ut vulputate. Illum eos et ea dolor et stet ipsum magna sea. Cum dolores sed id praesent dolores rebum dolores dolor odio ea delenit amet suscipit. Amet nonumy erat lorem justo et nihil dolor. Et commodo no consequat sed gubergren iusto voluptua aliquam sit clita sit clita. Takimata quis ipsum laoreet et dolor dolores sanctus invidunt feugiat dolore. Duo clita assum nonumy justo at dolor vulputate vero et sit. Sit rebum duis. Magna ut autem consequat rebum magna elitr ea sea est dolor enim labore ad vel iriure.\n", 
+
+    "pageCount": 3000, 
+
+    "excerpt": "Vero sanctus consetetur dolore minim sea nulla vulputate sit duis diam sea nobis amet dolor invidunt. Facer eu ipsum et dolore quis tempor voluptua rebum eu molestie dolore duo imperdiet accusam sit sit luptatum. Quod ipsum kasd suscipit et magna sea labore nisl duo diam sed sanctus diam clita. Dolor erat rebum dolor. Sed sit ipsum aliquyam nulla lorem dolore duo diam te. Justo diam nonumy laoreet vero minim feugiat in nam no et id sanctus. Ipsum ipsum suscipit dignissim rebum et hendrerit volutpat at. Labore in vero aliquyam tempor gubergren lorem gubergren lorem imperdiet vero et vel nihil hendrerit dolore aliquyam sanctus feugiat. Dolore esse gubergren et vero ipsum id eirmod accusam clita accumsan soluta autem ipsum tempor labore et ipsum sed.\nUt nonumy dolor no eum gubergren stet sit dolore justo elitr erat kasd quis sed duo. Praesent ea dolore dolore. Ipsum dolor est amet eos eirmod sed justo diam invidunt sanctus ut sed dolore adipiscing tempor. Zzril dolore diam dolor dolore eum ut amet amet nonumy consetetur. Vulputate augue enim sanctus dolor at augue voluptua et clita clita nostrud tempor nulla lorem eirmod eros consequat. Consetetur accusam velit blandit invidunt sit nulla labore ipsum.\nTempor diam ipsum dolor voluptua diam sit stet. Ea duo quod takimata dolore ea ipsum accusam invidunt sit dolor stet ipsum sed voluptua enim. Ut et in sit accusam diam aliquyam praesent sed elitr dolore dignissim at voluptua cum magna eros. Dolore no sit amet justo accusam sit nulla.\nEum dolor tation vero diam dolor elit suscipit ut amet ad. Ipsum clita justo sed diam et amet elitr. Consetetur at ipsum amet diam sit et eirmod diam ad. At elitr magna justo vero sed no eum ut erat illum ipsum ipsum nulla sea. Sit dolore et vulputate no no ipsum vero et justo et amet ad et. Ut aliquam et. Diam volutpat erat sit magna in voluptua justo sed invidunt aliquyam. Nonumy sed consetetur magna congue lorem clita nonumy erat mazim elitr kasd ipsum et labore consetetur ea nam. Odio commodo consequat qui quis justo sadipscing sed. Aliquyam sea accusam nobis vel amet ipsum gubergren consequat voluptua nobis velit diam duo erat. Sanctus justo ipsum. Option illum dolor aliquam sit. Eos et magna placerat autem clita ut. Accusam tincidunt veniam labore aliquyam possim sit dolor amet labore eirmod. Labore aliquyam ut et invidunt. Ea elitr ut laoreet. Labore dolor no dolore labore feugait et eos illum ea tempor in dolores.\nUt odio no nulla eirmod. Erat et duo ipsum augue laoreet nam dolor sed amet aliquyam et nostrud esse lorem dolor kasd. Amet sed aliquam. Invidunt sit sanctus dolores duo ipsum illum ipsum hendrerit sit vero lobortis. Est velit imperdiet duo. Ea at est ut. Invidunt nonumy vel feugiat eu sadipscing lorem magna sit eirmod nobis aliquip diam. Gubergren facer suscipit amet dolore aliquam et takimata veniam sit lorem wisi dolore sadipscing sit. Voluptua et sadipscing tempor dolore sit sadipscing eu amet gubergren sed consequat feugait. Hendrerit vero sanctus nulla eu sadipscing eirmod rebum amet blandit. Vero doming stet erat. Dolor sea diam et esse nostrud sanctus nibh ut diam erat justo vel ea eros ex. Justo sit tempor est takimata iusto velit magna ipsum et amet ipsum praesent sit at nonumy accusam. Rebum sed ut dolores magna duis tempor eos elitr tempor nulla veniam est est. Sed aliquyam est facilisis stet at odio et rebum diam tempor. Sit praesent amet illum dolore ea. Sit exerci et suscipit takimata amet assum vulputate placerat sadipscing consetetur stet aliquyam stet diam.\n", 
+
+    "publishDate": "2023-08-23T19:30:27.0028387+00:00" 
+} 
+``` 
+## GET​/api​/v1​/Books​/{id}   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/205   
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, содержит сообщение о том, что допущена ошибка  
+
+HTTP status: 400 Bad Request     
+
+3.	Заголовки запроса - Request headers  
+``` 
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: 6fbad10b-4e86-4169-9f0e-29d6b96b90f8 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+```   
+4.	Тело запроса - Request body   
+
+нет   
+
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Type: application/json; charset=utf-8; v=1.0 
+
+Date: Fri, 22 Sep 2023 19:30:50 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+
+api-supported-versions: 1.0 
+```   
+6.	Тело ответа - Response body    
+``` 
+{ 
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.4", 
+
+    "title": "Not Found", 
+
+    "status": 404, 
+
+    "traceId": "00-a38160cd9e7eaf4a98e8f468759547b7-08707d2f8ea9b94e-00" 
+} 
+``` 
+## PUT​/api​/v1​/Books​/{id}   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/5 
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, соответствует PUT запросу   
+
+HTTP status: 200 - Sucсess   
+
+3.	Заголовки запроса - Request headers   
+``` 
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: bfac61ca-2f4f-4a9e-9e1b-674ac5c60ec6 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+``` 
+4.	Тело запроса - Request body   
+``` 
+{ 
+ "id": 5, 
+
+ "title": "mama", 
+
+ "description": "papa", 
+
+ "pageCount": 0, 
+
+ "excerpt": "string", 
+
+ "publishDate": "2023-09-22T08:12:48.170Z" 
+} 
+``` 
+5.	Заголовки ответа - Response headers  
+``` 
+Content-Type: application/json; charset=utf-8; v=1.0 
+
+Date: Fri, 22 Sep 2023 19:53:09 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+
+api-supported-versions: 1.0 
+```   
+6.	Тело ответа - Response body    
+``` 
+{ 
+    "id": 5, 
+
+    "title": "mama", 
+
+    "description": "papa", 
+
+    "pageCount": 0, 
+
+    "excerpt": "string", 
+
+    "publishDate": "2023-09-22T08:12:48.17Z" 
+} 
+```   
+## PUT​/api​/v1​/Books​/{id}   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/5 
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, содержит сообщение о том, что допущена ошибка  
+
+HTTP status: 400 Bad Request   
+
+3.	Заголовки запроса - Request headers   
+```
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: a350972f-0818-4326-ad62-27732df71089 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+``` 
+4.	Тело запроса - Request body   
+``` 
+{ 
+ "id": yes, 
+
+ "title": "mama", 
+
+ "description": "papa", 
+
+ "pageCount": 0, 
+
+ "excerpt": "string", 
+
+ "publishDate": "2023-09-22T08:12:48.170Z" 
+} 
+``` 
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Type: application/problem+json; charset=utf-8 
+
+Date: Fri, 22 Sep 2023 19:58:07 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+```  
+6.	Тело ответа - Response body    
+``` 
+{ 
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1", 
+
+    "title": "One or more validation errors occurred.", 
+
+    "status": 400, 
+
+    "traceId": "00-0ba126663425b9419c4f4e11b1583e58-a0e972be1ee04a4f-00", 
+
+    "errors": { 
+
+        "$.id": [ 
+
+            "'y' is an invalid start of a value. Path: $.id | LineNumber: 1 | BytePositionInLine: 7." 
+        ] 
+    } 
+} 
+```   
+## PUT​/api​/v1​/Books​/{id}   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/5 
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, содержит сообщение о том, что допущена ошибка  
+
+HTTP status: 400 Bad Request   
+
+3.	Заголовки запроса - Request headers   
+``` 
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: 5f3c0b44-e115-4223-8e23-06a4d737ef9a 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+``` 
+4.	Тело запроса - Request body   
+``` 
+{ 
+ "id": 0, 
+
+ "title":  
+
+ "description": "string", 
+
+ "pageCount": 0, 
+
+ "excerpt": "string", 
+
+ "publishDate": "2023-09-21T21:45:17.413Z" 
+} 
+``` 
+5.	Заголовки ответа - Response headers  
+``` 
+Content-Type: application/problem+json; charset=utf-8 
+
+Date: Fri, 22 Sep 2023 20:01:08 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+```  
+6.	Тело ответа - Response body    
+``` 
+{ 
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1", 
+
+    "title": "One or more validation errors occurred.", 
+
+    "status": 400, 
+
+    "traceId": "00-beb3b32ec292104ca33dd200e66bf583-337170b1311c474b-00", 
+
+    "errors": { 
+
+        "$": [ 
+
+            "':' is invalid after a value. Expected either ',', '}', or ']'. Path: $ | LineNumber: 3 | BytePositionInLine: 14." 
+        ] 
+    } 
+} 
+```
+## PUT​/api​/v1​/Books​/{id}   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/5 
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, содержит сообщение о том, что запрос некорректен  
+
+HTTP status: 415   
+
+3.	Заголовки запроса - Request headers   
+
+``` 
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: fb63aebb-a762-4d30-8b61-3946a18ecf3a 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+``` 
+4.	Тело запроса - Request body   
+
+нет 
+
+5.	Заголовки ответа - Response headers  
+``` 
+Content-Type: application/problem+json; charset=utf-8 
+
+Date: Fri, 22 Sep 2023 20:04:36 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+```   
+6.	Тело ответа - Response body    
+``` 
+{ 
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.13", 
+
+    "title": "Unsupported Media Type", 
+
+    "status": 415, 
+
+    "traceId": "00-1d94cac3a6684748b88c40aea5069f09-269d9ce0ba844b46-00" 
+} 
+```
+## PUT​/api​/v1​/Books​/{id}   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/5 
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, содержит сообщение об ошибке  
+
+HTTP status: 400   
+
+3.	Заголовки запроса - Request headers   
+``` 
+Content-Type: application/json 
+
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: f92e9eba-253b-4ad7-b3f0-a627d74716b7 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+``` 
+4.	Тело запроса - Request body   
+``` 
+{ 
+ "id": 0, 
+
+ "title":1   
+
+ "description": "string", 
+
+ "pageCount": 0, 
+
+ "excerpt": "string", 
+
+ "publishDate": "2023-09-21T21:45:17.413Z" 
+} 
+```   
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Type: application/problem+json; charset=utf-8 
+
+Date: Fri, 22 Sep 2023 20:10:01 GMT 
+
+Server: Kestrel 
+
+Transfer-Encoding: chunked 
+```  
+6.	Тело ответа - Response body    
+``` 
+{{ 
+    "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1", 
+
+    "title": "One or more validation errors occurred.", 
+
+    "status": 400, 
+
+    "traceId": "00-39e3d3c57a917c42a353d440c65f8518-671f81519793e348-00", 
+
+    "errors": { 
+
+        "$.title": [ 
+
+            "The JSON value could not be converted to System.String. Path: $.title | LineNumber: 2 | BytePositionInLine: 10." 
+        ] 
+    } 
+} 
+```
+## DELETE​/api​/v1​/Books​/{id}   
+
+1.	URL   
+
+https://fakerestapi.azurewebsites.net/api/v1/Books/20   
+
+2.	 Ожидаемый результат   
+
+Тело ответа корректное, соответствует запросу на удаление книги по id  
+
+HTTP status: 200 - Sucсess     
+
+3.	Заголовки запроса - Request headers   
+``` 
+User-Agent: PostmanRuntime/7.33.0 
+
+Accept: */* 
+
+Cache-Control: no-cache 
+
+Postman-Token: e5830efc-ee1e-48cc-ba99-42c4109bb13e 
+
+Host: fakerestapi.azurewebsites.net 
+
+Accept-Encoding: gzip, deflate, br 
+
+Connection: keep-alive 
+```   
+4.	Тело запроса - Request body  
+
+нет 
+
+5.	Заголовки ответа - Response headers   
+``` 
+Content-Length: 0 
+
+Date: Fri, 22 Sep 2023 20:13:40 GMT 
+
+Server: Kestrel 
+
+api-supported-versions: 1.0 
+```   
+6.	Тело ответа - Response body    
+
+нет 
 
 # CoverPhotos:
 
@@ -2322,5 +3267,4 @@ Server: Kestrel
 api-supported-versions: 1.0
 ```
 6. Response body - Нет
-
 
